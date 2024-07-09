@@ -195,55 +195,5 @@
     }
 </script>
 
-<!-- <script>
-    function submitForm() {
-        const formData = {
-            batting_team: document.getElementById('battingTeam').value,
-            bowling_team: document.getElementById('bowlingTeam').value,
-            current_score:document.getElementById('currentScore').value,
-            wickets:document.getElementById('wickets').value,
-            overs:document.getElementById('oversCompleted').value,
-            target:document.getElementById('target').value,
-            city: document.getElementById('venue').value,
-            // runs_left: document.getElementById('runs_left').value,
-            // balls_left: document.getElementById('balls_left').value,
-            // wickets_left: document.getElementById('wickets_left').value,
-            // total_runs_x: document.getElementById('total_runs_x').value,
-            // crr: document.getElementById('crr').value,
-            // rrr: document.getElementById('rrr').value
-        };
-
-        fetch('/process', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('result').innerText = data.result;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
-</script> -->
-
-<!-- <script>
-    function display_res(){
-        // alert("prob");
-        document.getElementById("hellohi").innerHTML='please wait... ';
-    }
-    batting_team= document.getElementById('battingTeam').value
-    bowling_team=document.getElementById('bowlingTeam').value
-    current_score=document.getElementById('currentScore').value
-    wickets=document.getElementById('wickets').value
-    overs=document.getElementById('oversCompleted').value
-    target=document.getElementById('target').value
-    city= document.getElementById('venue').value
-    document.getElementById("result").addEventListener("click", display_res);
-</script> -->
-
 </body>
 </html>
