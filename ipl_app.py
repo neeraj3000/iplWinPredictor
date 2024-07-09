@@ -23,7 +23,7 @@ def probablity(pipe,lst):
 
 @app.route('/')
 def index():
-    return render_template_string(open('templates/ipl.html').read())
+    return render_template_string(open('ipl.html').read())
 
 @app.route('/submit', methods=['GET','POST'])
 def submit():
