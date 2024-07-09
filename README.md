@@ -1,9 +1,7 @@
 **Cricket Match Win Probability Predictor**
-
 This project predicts the probability of winning for cricket teams based on various match conditions. By inputting the batting team, bowling team, current score, wickets, overs completed, target, and venue, the model provides the likelihood of each team winning the match.
 
 **Introduction**
-
 This machine learning project aims to provide real-time predictions of win probabilities for cricket matches. It utilizes various match parameters to deliver accurate predictions, helping fans and analysts better understand the dynamics of ongoing games.
 
 Features
