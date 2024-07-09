@@ -1,7 +1,5 @@
-Here's a suggested README text for your project:
-
-Cricket Match Win Probability Predictor
-This project predicts the probability of winning for cricket teams based on various match conditions. By inputting the batting team, bowling team, current score, wickets, overs completed, target, and venue, the model provides the likelihood of each team winning the match.
+**Cricket Match Win Probability Predictor
+**This project predicts the probability of winning for cricket teams based on various match conditions. By inputting the batting team, bowling team, current score, wickets, overs completed, target, and venue, the model provides the likelihood of each team winning the match.
 
 **Table of Contents**
 Introduction
