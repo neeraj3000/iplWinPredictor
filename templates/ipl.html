@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Win Probability Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #hellohi {
+            /* background-color: lightblue; */
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>IPL Win Probability Predictor</h2>
+    <form action="/submit" method="post" id="myForm">
+        <div class="form-group">
+            <label for="battingTeam">Batting Team</label>
+            <select id="battingTeam" name="battingTeam" aria-placeholder="Select batting team">
+                <option value="team0">--Select batting team--</option>
+                <option value="team1">Sunrisers Hyderabad</option>
+                <option value="team2">Mumbai Indians</option>
+                <option value="team3">Royal Challengers Bangalore</option>
+                <option value="team4">Kolkata Knight Riders</option>
+                <option value="team5">Kings XI Punjab</option>
+                <option value="team6">Chennai Super Kings</option>
+                <option value="team7">Delhi Capitals</option>
+                <option value="team8">Rajasthan Royals</option>
+
+                <!-- Add more teams as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bowlingTeam">Bowling Team</label>
+            <select id="bowlingTeam" name="bowlingTeam">
+                <option value="team0">--Select bowling team--</option>
+                <option value="team1">Sunrisers Hyderabad</option>
+                <option value="team2">Mumbai Indians</option>
+                <option value="team3">Royal Challengers Bangalore</option>
+                <option value="team4">Kolkata Knight Riders</option>
+                <option value="team5">Kings XI Punjab</option>
+                <option value="team6">Chennai Super Kings</option>
+                <option value="team7">Delhi Capitals</option>
+                <option value="team8">Rajasthan Royals</option>
+                <!-- Add more teams as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="currentScore">Current Score</label>
+            <textarea id="currentScore" name="currentScore" rows="2" placeholder="e.g., 150"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="wickets">Wickets</label>
+            <select id="wickets" name="wickets">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="oversCompleted">Overs Completed</label>
+            <textarea id="oversCompleted" name="oversCompleted" rows="1" placeholder="e.g., 15.2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="target">Target</label>
+            <textarea id="target" name="target" rows="1" placeholder="e.g., 250"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="venue">Select Venue</label>
+            <select id="venue" name="venue">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Indore">Indore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Cape Town">Cape Town</option>
+                <option value="Port Elizabeth">Port Elizabeth</option>
+                <option value="Durban">Durban</option>
+                <option value="Centurion">Centurion</option>
+                <option value="East London">East London</option>
+                <option value="Johannesburg">Johannesburg</option>
+                <option value="Kimberley">Kimberley</option>
+                <option value="Bloemfontein">Bloemfontein</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Cuttack">Cuttack</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Dharamsala">Dharamsala</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+                <option value="Pune">Pune</option>
+                <option value="Raipur">Raipur</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="Mohali">Mohali</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <!-- Add more venues as needed -->
+            </select>
+        </div>
+        <!-- <input type="submit" id="result" value="Find Win Probability" > -->
+        <button type="button" onclick="submitForm()">Find the win probability</button>
+
+        <div id="hellohi">
+
+        </div>
+    </form>
+</div>
+
+<script>
+    function submitForm() {
+        // Get the form element
+        var form = document.getElementById("myForm");
+        let batting_team = document.getElementById('battingTeam').value;
+        let bowling_team = document.getElementById('bowlingTeam').value;
+        let current_score = document.getElementById('currentScore').value;
+        let wickets = document.getElementById('wickets').value;
+        let overs = document.getElementById('oversCompleted').value;
+        let target = document.getElementById('target').value;
+        let city = document.getElementById('venue').value;
+        if (target === "" || current_score === "" || overs === "" || batting_team === "" || bowling_team === "" || wickets === "" || city === "") {
+                alert("Please fill the form.");
+            } 
+        else{
+            // If all fields are filled, submit the form
+            document.getElementById("myForm").submit();
+        }   
+    }
+</script>
+
+<!-- <script>
+    function submitForm() {
+        const formData = {
+            batting_team: document.getElementById('battingTeam').value,
+            bowling_team: document.getElementById('bowlingTeam').value,
+            current_score:document.getElementById('currentScore').value,
+            wickets:document.getElementById('wickets').value,
+            overs:document.getElementById('oversCompleted').value,
+            target:document.getElementById('target').value,
+            city: document.getElementById('venue').value,
+            // runs_left: document.getElementById('runs_left').value,
+            // balls_left: document.getElementById('balls_left').value,
+            // wickets_left: document.getElementById('wickets_left').value,
+            // total_runs_x: document.getElementById('total_runs_x').value,
+            // crr: document.getElementById('crr').value,
+            // rrr: document.getElementById('rrr').value
+        };
+
+        fetch('/process', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').innerText = data.result;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script> -->
+
+<!-- <script>
+    function display_res(){
+        // alert("prob");
+        document.getElementById("hellohi").innerHTML='please wait... ';
+    }
+    batting_team= document.getElementById('battingTeam').value
+    bowling_team=document.getElementById('bowlingTeam').value
+    current_score=document.getElementById('currentScore').value
+    wickets=document.getElementById('wickets').value
+    overs=document.getElementById('oversCompleted').value
+    target=document.getElementById('target').value
+    city= document.getElementById('venue').value
+    document.getElementById("result").addEventListener("click", display_res);
+</script> -->
+
+</body>
+</html>
