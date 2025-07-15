@@ -88,30 +88,7 @@ Then open your browser and go to:
 
 ---
 
-## 📷 Screenshots
-
-> Place screenshots inside the `static/screenshots/` folder
-
-<p align="center">
-  <img src="static/screenshots/home.png" width="600" />
-</p>
-
-<p align="center">
-  <img src="static/screenshots/result.png" width="600" />
-</p>
-
----
-
-## 🔮 Future Enhancements
-
-- Integrate real-time match data from APIs
-- Add advanced ML models (XGBoost, Random Forest)
-- Include venue and player-specific performance factors
-- Deploy using Docker or a cloud platform like Heroku/AWS
-
----
-
 ## 🙌 Author
 
 **Neeraj B**  
-[GitHub](https://github.com/neeraj3000) | [LinkedIn](https://www.linkedin.com/in/neeraj3000/)
+[GitHub](https://github.com/neeraj3000) | [LinkedIn](https://www.linkedin.com/in/neerajboggavarapu24)
